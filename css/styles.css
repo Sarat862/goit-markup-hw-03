@@ -31,8 +31,14 @@ ul {
     padding-left: 0px;
 }
 
+img {
+    display:block;
+    max-width: 100%;
+    height: auto;
+}
+
 .container {
-    width: 1170px;
+    width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
@@ -52,8 +58,20 @@ ul {
     overflow: hidden;
 }
 
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+
+
 
 /* HEADER, ШАПКА СТОРІНКИ */
+
+.header {
+    border-bottom: 1px solid #ECECEC;
+}
+
 
 .head-container{
     display:flex;
@@ -94,11 +112,9 @@ ul {
 .nav-list-item:not(:first-child) {
     margin-left: 50px;  
 }
-.nav-list-item {
-    padding-top: 32px;
-    padding-bottom: 32px;
-}
+
 .nav-list-link {
+    display:block;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -147,8 +163,8 @@ ul {
 .hero-title {
     
     padding-bottom: 30px;
-    padding-left: 238px;
-    padding-right: 238px;
+    /* padding-left: 238px;
+    padding-right: 238px; */
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -157,16 +173,19 @@ ul {
     color: var(--text-color-theme-dark);
 }
 .hero-btn { 
+    /* width: 200px;
+    height: 50px; */
+    padding: 10px 32px;
     
-    background-color: var(--accent-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
     font-weight: 700;
     font-size: 16px;
-    line-height: 1.88;
+    line-height: 1.87;
     letter-spacing: 0.06em;
     color: var(--text-color-theme-dark);
     cursor: pointer;
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -176,11 +195,30 @@ ul {
 
 /* Особливості компанії */
 
+.features {
+    padding-top: 94px;
+}
+
+.features-list {
+    display:flex;
+    margin-left: -30px;
+}
+
+/* .features-item:not(:first-child) {
+    margin-left: 30px;
+} */
+
+.features-item {
+    flex-basis: calc((100% - 120px) / 4);
+    margin-left: 30px;
+}
+
 .features-title {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    margin-bottom: 10px;
 }
 .features-text {
     font-size: 14px;
@@ -190,17 +228,47 @@ ul {
 }
 
 /* Чим займається компанія */
+
 .caption-title {
+    margin-bottom: 50px;
     font-size: 36px;
     line-height: 1.17;
     letter-spacing: 0.03em;
+    text-align:center;
 }
+
+.work-company-list {
+    display:flex;
+    justify-content:space-between;
+}
+
+/* .work-company-item {
+    
+} */
 
 /* Команда компанії */
 .developer-company {
     background-color: var(--secondary-background-color);
 }
-.developer-company-title {
+
+.developer-company-list {
+    display:flex;
+    justify-content:space-between;
+}
+
+.developer-company-item {
+    background-color: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    padding-bottom: 30px;
+}
+
+.developer-company-img {
+    margin-bottom: 30px;
+}
+
+.developer-company-name {
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -218,8 +286,22 @@ ul {
 /* FOOTER, ПІДВАЛ СТОРІНКИ */
 
 .footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color: var(--primary-background-color);
 }
+
+.logo-footer {
+    display: block;
+    margin-bottom: 20px;
+    font-family: var(--secondary-font-family);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--accent-color);
+}
+
 .part-logo-invert {
     font-family: var(--secondary-font-family);
     font-weight: 700;
@@ -228,13 +310,21 @@ ul {
     letter-spacing: 0.03em;
     color: var(--text-color-theme-dark)
 }
+
 .address-text {
+    margin-bottom: 7px;
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--text-color-theme-dark) 
 }
+
+.footer-contact-item:not(:last-child) {
+    display: block;
+    margin-bottom: 9px;
+}
+
 .footer-contact-link {
     font-style: normal;
     font-size: 14px;
@@ -250,14 +340,31 @@ ul {
 
 
 
-/* ======PAGE PORTFOLIO====== */
+                           /* ======PAGE PORTFOLIO====== */
 
 /* MAIN ,ГОЛОВНА ЧАСТИНА СТОРІНКИ */
 
+.projects-company {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 /* Фільтр проектів */
+
+.project-items {
+    display:flex;
+    justify-content: center;
+    margin-bottom: 34px;
+}
+
+.project-item:not(:first-child) {
+    margin-left: 8px;
+}
+
 .project-item-btn {
+    padding: 6px 22px;
+
     background-color: var(--secondary-background-color);
-    border: none;
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -266,17 +373,59 @@ ul {
     letter-spacing: 0.03em;
     color: var(--primary-color-text);
     cursor: pointer;
+    border: none;
+    border-radius: 4px;
 }
 .project-item-btn:hover,
 .project-item-btn:focus {
     background-color: var(--accent-color);
     color: var(--text-color-theme-dark);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
 }
-.current-btn {
+.project-item-btn-current {
+    padding: 6px 22px;
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
     background-color: var(--accent-color);
     color: var(--text-color-theme-dark);
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
 }
 /* Список проектів */
+
+.project-list {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project-list-item:not(:nth-last-child(-n+3)) {
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.project-box {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-right: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
+}
+
+/* .project-img {
+
+} */
+
 .project-title {
     font-size: 18px;
     line-height: 2;

@@ -135,10 +135,13 @@ img {
     display:flex;
     margin-left: auto;
 }
-.contact-item:not(:first-child) {
-    margin-left: 50px;
+.contact-item:not(:last-child) {
+    margin-right: 50px;
 }
 .contact-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -166,7 +169,7 @@ img {
 .hero-title {
     width: 696px;
     margin: 0 auto;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 
     font-weight: 900;
     font-size: 44px;
@@ -263,7 +266,7 @@ img {
 
 .developer-company-item {
     margin-right: 30px;
-    padding-bottom: 30px;
+    
     background-color: var(--text-color-theme-dark);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
@@ -273,8 +276,9 @@ img {
     margin-right: 0;
 }
 
-.developer-company-img {
-    margin-bottom: 30px;
+.developer-company-box {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .developer-company-name {
@@ -364,7 +368,7 @@ img {
 .project-items {
     display:flex;
     justify-content: center;
-    margin-bottom: 34px;
+    margin-bottom: 50px;
 }
 
 .project-item:not(:first-child) {
